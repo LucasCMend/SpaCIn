@@ -1,6 +1,8 @@
 import pygame, sys
 from stars import Stars
 from settings import Settings
+from fundo import Fundo
+from ship import Ship
 class Jogo:
     def __init__(self):
         pygame.init()
@@ -11,37 +13,68 @@ class Jogo:
         self.clock = pygame.time.Clock()
         self.sprite_stars = pygame.sprite.Group()
         self.stars = Stars(self)
+        self.fundo = Fundo(self)
+        self.ship = Ship(self)
     def rodar(self):
         while True:
             self.imagem()
             self.update()
             self.apply_stars()
+            self.limites()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
                 elif event.type == pygame.KEYDOWN:
                     self.movimento(event)
-                elif event.type == pygame.KEYUP:
-                    self.parado(event)
             self.clock.tick(60)
+    def limites(self):
+        if self.ship.rect.right >= self.ship.screen_rect.right:
+             self.settings.d = 0
+        if self.ship.rect.left <= self.ship.screen_rect.left:
+             self.settings.a = 0
+        if self.ship.rect.bottom >= self.ship.screen_rect.bottom:
+             self.settings.s = 0
+        if self.ship.rect.top <= self.ship.screen_rect.top:
+             self.settings.w = 0
     def movimento(self,event):
         if event.key == pygame.K_s:
-            self.settings.down = 0.25
-        elif event.key == pygame.K_w:
-            self.settings.up = 0.25
-        elif event.key == pygame.K_d:
-            self.settings.right = 0.25
-        elif event.key == pygame.K_a:
-            self.settings.left = 0.25
-    def parado(self,event):
-        if event.key == pygame.K_s:
-            self.settings.down = 0
-        elif event.key == pygame.K_w:
-            self.settings.up = 0
-        elif event.key == pygame.K_d:
+            self.ship.image = pygame.image.load("C:/Users/joaoc/OneDrive/Área de Trabalho/projetoIP/1000102277.png")
+            self.ship.image = pygame.transform.scale(self.ship.image,(50,60))
             self.settings.right = 0
-        elif event.key == pygame.K_a:
             self.settings.left = 0
+            self.settings.s = 0.4
+            self.settings.w = 0
+            self.settings.d = 0
+            self.settings.a = 0
+        elif event.key == pygame.K_w:
+            self.ship.image = pygame.image.load("C:/Users/joaoc/OneDrive/Área de Trabalho/projetoIP/1000102277.png")
+            self.ship.image = pygame.transform.scale(self.ship.image,(50,60))
+            self.settings.right = 0
+            self.settings.left = 0
+            self.settings.w = 0.4
+            self.settings.s = 0
+            self.settings.d = 0
+            self.settings.a = 0
+        elif event.key == pygame.K_d:
+            self.ship.image = pygame.image.load("C:/Users/joaoc/OneDrive/Área de Trabalho/projetoIP/1000102277.png")
+            self.ship.image = pygame.transform.scale(self.ship.image,(50,60))
+            self.ship.image = pygame.transform.rotate(self.ship.image, -30)
+            self.settings.right = 0.4
+            self.settings.left = 0
+            self.settings.d = 0.4
+            self.settings.w = 0
+            self.settings.s = 0
+            self.settings.a = 0
+        elif event.key == pygame.K_a:
+            self.ship.image = pygame.image.load("C:/Users/joaoc/OneDrive/Área de Trabalho/projetoIP/1000102277.png")
+            self.ship.image = pygame.transform.scale(self.ship.image,(50,60))
+            self.ship.image = pygame.transform.rotate(self.ship.image, 30)
+            self.settings.left = 0.4
+            self.settings.right = 0
+            self.settings.a = 0.4
+            self.settings.w = 0
+            self.settings.d = 0
+            self.settings.s = 0
     def update(self):
         self.sprite_stars.update()
         for star in self.sprite_stars.copy():
@@ -57,12 +90,13 @@ class Jogo:
             self.i += 1
             one_star = Stars(self)
             self.sprite_stars.add(one_star)
-            if self.i >= 500:
+            if self.i >= 1000:
                 self.stars_code = False
     def imagem(self):
-        self.screen.fill((0,0,0))
+        self.fundo.blitme()
         for star in self.sprite_stars.sprites():
             star.draw_stars()
+        self.ship.draw()
         pygame.display.flip()
 if __name__ == "__main__":
     ai = Jogo()
