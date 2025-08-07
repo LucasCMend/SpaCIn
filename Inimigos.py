@@ -13,7 +13,7 @@ class TiroInimigo(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
 
         self.rect.center = (x, y)
-        self.velocidade = 0.00008
+        self.velocidade = 6
 
     def update(self):
 
@@ -37,8 +37,8 @@ class Inimigos(pygame.sprite.Sprite):
 
         self.rect.topleft = (x, y)
 
-        self.velocidade_x = 0.009
-        self.velocidade_y = 0.007
+        self.velocidade_x = 4
+        self.velocidade_y = 3
 
     def atirar(self):
 
