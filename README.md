@@ -1,1 +1,0 @@
-Esse é um projeto do trabalho final de IP. O jogo se trata de uma missão espacial, com o objetivo de trazer ao planeta Terra os resultados das pesquisas no planeta Marte. Para que chegue em segurança, é necessário que o jogador desvie dos obstáculos à sua frente e colha todas as peças da nave ao longo do caminho.
