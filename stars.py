@@ -9,7 +9,7 @@ class Stars(Sprite):
         self.screen = ai_game.screen
         self.color = (200,200,200)
         self.screen_rect = ai_game.screen.get_rect()
-        self.image = pygame.image.load("C:/Users/joaoc/OneDrive/Área de Trabalho/projetoIP/big_star.png")
+        self.image = pygame.image.load("imagens/big_star.png").convert_alpha()
         self.image = pygame.transform.scale(self.image, (1,1))
         self.rect = self.image.get_rect()
         self.rect.x = randint(0, self.screen_rect.right)
@@ -27,4 +27,3 @@ class Stars(Sprite):
 
     def draw_stars(self):
         pygame.draw.rect(self.screen, self.color, self.rect)
-
