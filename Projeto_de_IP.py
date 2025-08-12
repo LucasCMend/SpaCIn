@@ -278,7 +278,7 @@ class Jogo:
                 if self.inimigos.copy():
                     inimigo = self.lista[i]
                     tiro.x,tiro.y = inimigo.x + 25,inimigo.y + 25
-                    if inimigo.y >= self.ship.y:
+                    if inimigo.y >= self.ship.y or inimigo.y >= self.ship.screen_rect.bottom - 170:
                         self.tiros.remove(tiro)
                         self.lista.pop(i)
                     else:
@@ -308,6 +308,8 @@ class Jogo:
             self.settings.fundo = 0
             self.key = False
         for inimigo in self.inimigos.copy():
+            if inimigo.y >= self.ship.screen_rect.bottom - 170:
+                inimigo.y += 4
             if inimigo.rect.colliderect(self.ship.rect):
                 self.inimigos.remove(inimigo)
                 self.settings.w = 0
