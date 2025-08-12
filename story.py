@@ -4,7 +4,7 @@ from Projeto_de_IP import Jogo
 
 pygame.mixer.init()
 som = pygame.mixer.Sound("imagens/music.mp3")
-som.set_volume(0.3)
+som.set_volume(0.8)
 som.play()
 def imagens_sequenciais(tela, lista_imagens, avancar_img, avancar_rect, voltar_img, voltar_rect, start_img, start_rect, start_hover_img, start_hover_rect, start):
     idx = 0
