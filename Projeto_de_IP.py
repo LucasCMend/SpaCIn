@@ -88,6 +88,7 @@ class Jogo:
         if event.key == pygame.K_s:
             self.ship.image = pygame.image.load("imagens/1000102277.png").convert_alpha()
             self.ship.image = pygame.transform.scale(self.ship.image,(50,60))
+            self.ship.mask = pygame.mask.from_surface(self.ship.image)
             self.settings.right = 0
             self.settings.left = 0
             self.settings.s = 2
@@ -97,6 +98,7 @@ class Jogo:
         elif event.key == pygame.K_w:
             self.ship.image = pygame.image.load("imagens/1000102277.png").convert_alpha()
             self.ship.image = pygame.transform.scale(self.ship.image,(50,60))
+            self.ship.mask = pygame.mask.from_surface(self.ship.image)
             self.settings.right = 0
             self.settings.left = 0
             self.settings.w = 2
@@ -107,6 +109,7 @@ class Jogo:
             self.ship.image = pygame.image.load("imagens/1000102277.png").convert_alpha()
             self.ship.image = pygame.transform.scale(self.ship.image,(50,60))
             self.ship.image = pygame.transform.rotate(self.ship.image, -30)
+            self.ship.mask = pygame.mask.from_surface(self.ship.image)
             self.settings.right = 2
             self.settings.left = 0
             self.settings.d = 2
@@ -117,6 +120,7 @@ class Jogo:
             self.ship.image = pygame.image.load("imagens/1000102277.png").convert_alpha()
             self.ship.image = pygame.transform.scale(self.ship.image,(50,60))
             self.ship.image = pygame.transform.rotate(self.ship.image, 30)
+            self.ship.mask = pygame.mask.from_surface(self.ship.image)
             self.settings.left = 2
             self.settings.right = 0
             self.settings.a = 2
