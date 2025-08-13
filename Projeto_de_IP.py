@@ -150,7 +150,7 @@ class Jogo:
             if self.j % 200 == 0:
                 asta = Asteroide(self)
                 self.asteroides.add(asta)
-                if self.j >= (10 * 200):
+                if self.j >= (6 * 200):
                     self.j = 0
                     self.asta_code = False
         for asteroide in self.asteroides.copy():
