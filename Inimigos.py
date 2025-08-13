@@ -19,7 +19,7 @@ class TiroInimigo(Sprite):
         pygame.draw.rect(self.screen,(255,0,0),self.rect)
 
 class Inimigos(Sprite):
-    def __init__(self,ai):
+    def __init__(self, ai):
         super().__init__()
         self.screen = ai.screen
         self.settings = ai.settings
@@ -28,9 +28,12 @@ class Inimigos(Sprite):
         self.image = pygame.image.load("imagens/NaveInimiga.png").convert_alpha()
         self.image = pygame.transform.scale(self.image, (60, 60))
 
+        self.mask = pygame.mask.from_surface(self.image)
+
         self.rect = self.image.get_rect()
-        self.rect.x = randint(0, self.screen_rect.right)
+        self.rect.x = randint(0, self.screen_rect.right - self.rect.width)
         self.rect.y = self.screen_rect.top - 60
+
         self.y = float(self.rect.y)
         self.x = float(self.rect.x)
         self.direita = True

@@ -6,14 +6,20 @@ class Ship:
         self.settings = ai_game.settings
         self.screen = ai_game.screen
         self.screen_rect = ai_game.screen.get_rect()
+
         self.image = pygame.image.load("imagens/1000102277.png").convert_alpha()
-        self.image = pygame.transform.scale(self.image,(50,60))
+        self.image = pygame.transform.scale(self.image, (50, 60))
+
         self.rect = self.image.get_rect()
         self.rect.center = self.screen_rect.center
+
         self.y = float(self.rect.y)
         self.x = float(self.rect.x)
 
+        self.mask = pygame.mask.from_surface(self.image)
+
     def draw(self):
+
         self.x += self.settings.d
         self.x -= self.settings.a
         self.y -= self.settings.w
@@ -21,5 +27,5 @@ class Ship:
 
         self.rect.y = self.y
         self.rect.x = self.x
-        self.screen.blit(self.image, self.rect)
 
+        self.screen.blit(self.image, self.rect)
