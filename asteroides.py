@@ -11,7 +11,7 @@ class Asteroide(Sprite):
         self.medida = randint(1, 4)
 
         self.image = pygame.image.load("imagens/asteroide.png").convert_alpha()
-        self.image = pygame.transform.scale(self.image, (40 * self.medida, 40 * self.medida))
+        self.image = pygame.transform.scale(self.image, (30 * self.medida, 30 * self.medida))
         
         self.rect = self.image.get_rect()
         self.rect.x = randint(0, self.screen_rect.right - self.rect.width)

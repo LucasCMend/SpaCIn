@@ -170,9 +170,11 @@ class Jogo:
         if self.quanto > 10:
             self.quanto = 10
         if self.diminui % 200 == 0:
-            self.settings.texto = f"Placas: {self.quantas}/{self.settings.quant_placas} | Combustível: {self.quanto}/10 | Fase: {self.fase}/3"
             self.diminui = 0
             self.quanto -= 1
+            if self.quanto > 10:
+                self.quanto = 10
+            self.settings.texto = f"Placas: {self.quantas}/{self.settings.quant_placas} | Combustível: {self.quanto}/10 | Fase: {self.fase}/3"
         if self.quanto == 0:
             self.settings.w = 0
             self.settings.a = 0

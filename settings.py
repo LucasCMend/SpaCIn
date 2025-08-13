@@ -14,5 +14,4 @@ class Settings:
         self.imagem = "imagens/fase1.jpg"
         self.texto = "Placas: 0/20 | Combustível: 10/10 | Fase: 1/3"
         self.quant_placas = 20
-        self.quant_inimigos = 5
-
+        self.quant_inimigos = 5    
