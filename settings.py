@@ -3,7 +3,7 @@ class Settings:
         self.right = 0
         self.left = 0
         self.up = 2
-        self.fundo = 0.2
+        self.fundo = 0.8
         self.w = 0
         self.a = 0
         self.d = 0
@@ -15,3 +15,4 @@ class Settings:
         self.texto = "Placas: 0/20 | Combustível: 10/10 | Fase: 1/3"
         self.quant_placas = 20
         self.quant_inimigos = 5    
+
