@@ -1,78 +1,82 @@
-🚀 SpaCIn - Uma Odisséia Espacial
-Este projeto é um jogo de nave no estilo "collectathon", inspirado em clássicos como Space Invaders e Subway Surfers. Desenvolvido como parte da disciplina de Introdução à Programação, o jogo desafia o jogador a sobreviver a uma chuva de asteroides e inimigos, testando seus reflexos e habilidades.
+# 🚀 SpaCIn - Uma Odisséia Espacial
 
-Membros da equipe:
+Este projeto é um jogo de nave no estilo *collectathon*, inspirado em clássicos como **Space Invaders** e **Subway Surfers**. Desenvolvido como parte da disciplina de **Introdução à Programação**, o jogo desafia o jogador a sobreviver a uma chuva de asteroides e inimigos, testando seus reflexos e habilidades.
 
-Daniel Acioly <dgla>
-Guilherme Valença <gvs2>
-Gustavo Leão <gjcln>
-João Gabriel Caldas <jgmc>
-Lucas Mendonça <lcm>
-Luís Felipe Durães <lflld>
+---
 
-Arquitetura do Projeto
-O código foi organizado seguindo os princípios da Programação Orientada a Objetos (POO) para garantir que o projeto seja modular, legível e fácil de expandir. A estrutura principal é dividida em classes, cada uma com uma responsabilidade única:
+## 👥 Membros da Equipe
+- **Daniel Acioly** `<dgla>`
+- **Guilherme Valença** `<gvs2>`
+- **Gustavo Leão** `<gjcln>`
+- **João Gabriel Caldas** `<jgmc>`
+- **Lucas Mendonça** `<lcm>`
+- **Luís Felipe Durães** `<lflld>`
 
-Inimigos.py - Contém a lógica dos inimigos e os tiros que eles disparam. Definindo as funções update, desenhar e init.
+---
 
-Projeto_de_IP.py - Código principal do jogo. Nele contém todas as lógicas necessárias para o jogo rodar, por exemplo: Colisões, tiro dos inimigos, movimentações, remover objetos, geração dos coletáveis, definição dos limites e masks.
+## 🏗 Arquitetura do Projeto
 
-asteroides.py - Contém a lógica dos asteroides. Definindo as funções update, desenhar e init.
+O código foi organizado seguindo os princípios da **Programação Orientada a Objetos (POO)**, garantindo modularidade, legibilidade e facilidade de expansão.  
+A estrutura principal é dividida em classes, cada uma com uma responsabilidade única:
 
-coletaveis.py - Contém a lógica dos coletáveis das placas e dos galões de combustível. Definindo as funções update, desenhar e init.
+- **`inimigos.py`** → Lógica dos inimigos e seus tiros.  
+- **`Projeto_de_IP.py`** → Código principal do jogo (colisões, tiros, movimentações, geração de coletáveis, limites e masks).  
+- **`asteroides.py`** → Lógica dos asteroides.  
+- **`coletaveis.py`** → Lógica dos coletáveis (placas e galões de combustível).  
+- **`dados.py`** → Exibe quantidade de placas, combustível e fase.  
+- **`final.py`** → Lógica de fim de jogo e avanço de fase (inclui música).  
+- **`fundo.py`** → Movimento do plano de fundo.  
+- **`game_over.py`** → Tela de fim de jogo e música.  
+- **`restart.py`** → Reinício do jogo após o fim.  
+- **`settings.py`** → Configurações básicas.  
+- **`ship.py`** → Lógica da nave do jogador (movimento e colisões).  
+- **`stars.py`** → Movimento das estrelas no plano de fundo.  
+- **`story.py`** → Integra história, menu e jogo.  
+- **`tela_menu.py`** → Tela de menu principal.  
+- **Pastas de mídia** → Imagens e áudios usados no jogo.  
 
-dados.py - Imprime na tela a quantidade de placas, de combustível e a fase do usuário.
+---
 
-final.py - Contém a lógica de final de jogo e avanço de fase. Definindo o fim da fase e a música a ser tocada.
+## 🛠 Ferramentas e Bibliotecas
 
-fundo.py - Contém a lógica do plano de fundo do jogo e seu movimento de acordo com o avanço do jogador.
+- **Python 3** → Linguagem versátil e poderosa, ideal para aprendizado e desenvolvimento rápido.  
+- **Pygame** → Biblioteca para jogos 2D em Python (janelas, sprites, eventos, FPS).  
+- **Git & GitHub** → Controle de versão e trabalho em equipe (branches para funcionalidades independentes).  
 
-game_over.py - Contém a tela de fim de jogo. Definindo o que será mostrado ao fim do jogo e a música.
+---
 
-restart.py - Contém a lógica para permitir o reinício do jogo após o fim do jogo.
+## 📌 Divisão de Trabalho
 
-settings.py - Contém os dados básicos do jogo.
+- **Felipe** → Classe de asteroides  
+- **Gustavo** → Classe de coletáveis e músicas  
+- **João** → Classe da nave e do fundo  
+- **Lucas** → Classe dos inimigos  
+- **Daniel** → Classe e lógica do menu e geração de imagens  
+- **Guilherme** → Geração de imagens e lógica de fim de jogo  
+- **Todos** → Integração e ajustes no código principal  
 
-ship.py - Contém a lógica da nave do jogador e seu movimento de acordo para onde o jogador está se movendo. Definindo as funções update, desenhar, init e mask.
+---
 
-stars.py - Contém a lógica das estrelas que ficam no plano de fundo do jogo e seu movimento de acordo com o avanço do jogador.
+## 💡 Conceitos Utilizados
 
-story.py - Contém a lógica que unifica a história do jogo com o menu e com o jogo em si.
+- Estruturas condicionais `if/else`
+- Laços `for` e `while`
+- Funções bem definidas para modularidade
+- Uso de classes para organização do código
 
-tela_menu.py - Contém a lógica da tela de menu. Definindo as funções init, draw e run.
+---
 
-pastas - Onde estão colocados os arquivos de imagem e áudio do jogo. 
+## ⚠️ Desafios e Lições Aprendidas
 
+- **Principal desafio** → Definição da ideia central e controle de escopo do projeto.  
+- **Principal erro** → Uso incorreto do GitHub e branches (baixa familiaridade inicial).  
+- **Lição aprendida** → Trabalho em equipe eficaz e aprendizado rápido das ferramentas e bibliotecas.  
 
- Ferramentas e Bibliotecas
-Python 3: É uma linguagem de programação versátil, poderosa e com uma sintaxe limpa, ideal para o aprendizado de conceitos fundamentais e para o desenvolvimento rápido de projetos como este.
+---
 
-Pygame: É a biblioteca padrão da indústria para o desenvolvimento de jogos 2D em Python. Foi escolhida por fornecer todas as ferramentas necessárias para a criação do nosso jogo, como manipulação de janelas, renderização de imagens (sprites), detecção de eventos (teclado) e controle de frame rate.
+## 🖼 Galeria
 
-Git e GitHub: Ferramentas essenciais para o controle de versão e o trabalho em equipe. Utilizamos o GitHub para hospedar o projeto e o Git para gerenciar as diferentes versões do código. O uso de branches foi fundamental para que cada membro pudesse trabalhar em uma funcionalidade (ex: um na nave, outro nos asteroides) sem interferir no trabalho dos outros.
+_Aqui você pode inserir imagens do jogo:_
 
-
- Divisão de Trabalho:
-O time definiu as funções separando cada um com uma classe diferente de início. E fomos projetando as necessidades e ajustes pontuais de acordo com a disponibilidade e necessidade de cada.
-
-Felipe - Classe de asteroides
-Gustavo - Classe de coletáveis e músicas
-João - Classe da nave e do fundo
-Lucas - Classe dos inimigos
-Daniel - Classe e lógica do menu e geração de imagens
-Guilherme - Geração de imagens e lógica de fim de jogo
-Todos - Integração no código principal e ajustes
- 
-
- Conceitos usados:
-O principal dele foi as lógicas básicas de if, else e laços de repetição (for e while) já que a biblioteca pygame facilita muito o trabalho da equipe. Além disso, a definição de funções foi algo fundamental no projeto pois facilita demais o processo e garante que o código fique o mais limpo possível, atribuindo as funções para as devidas classes.
-
-
- Desafios e erros do projeto:
-	Principal desafio: O maior desafio foi a definição da ideia, já que tivemos muitas ideias diferentes. E mesmo após definir a ideia central, o time queria ficar sempre aumentando o escopo do projeto para ter o melhor jogo possível. Mas fizemos uma reunião presencial no começo do projeto para colocar o time no mesmo compasso e iniciar o projeto de forma coesa.
-	Principal erro: Uso correto do github e das branches. Tivemos dificuldade de aplicar boas práticas de programação com o uso de branches de forma correta, até pela falta de familiaridade de uso do github. Fizemos de forma separada os códigos e sempre aplicávamos de forma única na main branch.
-	Principal lição aprendida: Que conseguimos trabalhar bem em equipe e executar um bom projeto apesar da falta de familiaridade inicial com as tecnologias e bibliotecas usadas.
- 
- Galeria:
 
  
