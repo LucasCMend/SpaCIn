@@ -169,6 +169,7 @@ class Jogo:
                 self.settings.d = 0
                 self.settings.fundo = 0
                 self.key = False
+                self.over.tocar_musica()
     def placa_e_combustivel(self):
         self.diminui += 1
         if self.quanto > 10:
@@ -186,6 +187,7 @@ class Jogo:
             self.settings.d = 0
             self.settings.fundo = 0
             self.key = False
+            self.over.tocar_musica()
         if self.quantas == self.settings.quant_placas:
             self.primeira_placa = True
             self.primeiro_galao = True
@@ -216,6 +218,7 @@ class Jogo:
                 self.settings.fundo = 0
                 self.won_game = True
                 self.key = False
+                self.over.tocar_musica()
             self.quantas = 0
             self.quanto = 10
         if self.primeira_placa:
@@ -280,6 +283,7 @@ class Jogo:
                 self.settings.d = 0
                 self.settings.fundo = 0
                 self.key = False
+                self.over.tocar_musica()
             if tiro.y >= self.ship.screen_rect.bottom + 200:
                 if self.inimigos.copy():
                     inimigo = self.lista[i]
@@ -313,6 +317,7 @@ class Jogo:
             self.settings.d = 0
             self.settings.fundo = 0
             self.key = False
+            self.over.tocar_musica()
         for inimigo in self.inimigos.copy():
             if inimigo.y >= self.ship.screen_rect.bottom - 170:
                 inimigo.y += 4
@@ -324,6 +329,7 @@ class Jogo:
                 self.settings.d = 0
                 self.settings.fundo = 0
                 self.key = False
+                self.over.tocar_musica()
             if inimigo.rect.bottom >= self.ship.screen_rect.bottom + 100:
                 self.inimigos.remove(inimigo)
             if inimigo.x >= self.fundo.screen_rect.right:
