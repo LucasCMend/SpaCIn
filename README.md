@@ -76,7 +76,7 @@ A estrutura principal é dividida em classes, cada uma com uma responsabilidade 
 
 ## 🖼 Galeria
 
-_Aqui você pode inserir imagens do jogo:_
+_Aqui você pode ver imagens do jogo:_
 
 <p align="center">
   <img src="imagens/galeria1.png" alt="Img 1" width="45%">
