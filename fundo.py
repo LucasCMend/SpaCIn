@@ -10,7 +10,7 @@ class Fundo:
         self.position = self.image.get_rect()
         self.position.y = self.screen_rect.bottom
         self.image = pygame.transform.scale(self.image, (self.screen_rect.right, self.position.bottom))
-        self.screen_rect.bottom -= 3650
+        self.screen_rect.bottom -= 5250#3650
         self.y = float(self.screen_rect.bottom)
 
     def blitme(self):

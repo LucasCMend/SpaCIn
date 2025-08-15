@@ -78,5 +78,11 @@ A estrutura principal é dividida em classes, cada uma com uma responsabilidade 
 
 _Aqui você pode inserir imagens do jogo:_
 
-
- 
+<p align="center">
+  <img src="imagens/galeria1.png" alt="Img 1" width="45%">
+  <img src="imagens/galeria2.png" alt="Img 2" width="45%">
+</p>
+<p align="center">
+  <img src="imagens/galeria3.png" alt="Img 3" width="45%">
+  <img src="imagens/galeria4.png" alt="Img 4" width="45%">
+</p>
