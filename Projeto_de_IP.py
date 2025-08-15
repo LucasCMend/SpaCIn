@@ -205,7 +205,7 @@ class Jogo:
                 self.fundo = Fundo(self)
             elif self.fase == 3:
                 self.settings.quant_inimigos = 7
-                self.settings.quant_placas = 10
+                self.settings.quant_placas = 15
                 self.settings.vel_tiro = 6
                 self.settings.vel_lados = 1.5
                 self.settings.imagem = "imagens/fase3.jpg"
@@ -372,3 +372,4 @@ class Jogo:
         else:
             self.dados.desenhar()
         pygame.display.flip()
+
