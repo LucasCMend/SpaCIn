@@ -1,6 +1,6 @@
 # 🚀 SpaCIn - Uma Odisséia Espacial
 
-Este projeto é um jogo de nave no estilo *collectathon*, inspirado em clássicos como **Space Invaders** e **Subway Surfers**. Desenvolvido como parte da disciplina de **Introdução à Programação**, o jogo desafia o jogador a sobreviver a uma chuva de asteroides e inimigos, testando seus reflexos e habilidades enquanto ele coleta placas para avançar de fase e combustível para continuar voando.
+Este projeto é um jogo de nave no estilo *collectathon*, inspirado em clássicos como o famoso **Space Invaders**. Desenvolvido como parte da disciplina de **Introdução à Programação**, o jogo desafia o jogador a sobreviver a uma chuva de asteroides e inimigos, testando seus reflexos e habilidades enquanto ele coleta placas para avançar de fase e combustível para continuar voando.
 
 ---
 
